@@ -1,0 +1,21 @@
+<div class="header">
+
+ <div class="container">
+
+ </div>
+</div>
+
+<div class="form">
+ <div class="container">
+ 
+<%= form_for(@client) do |c| %>
+<p>
+<%=  c.label(:name, "Client Name") %><br>
+<%= c.text_field(:name) %>
+</p>
+<p>
+ <%= c.submit "Save Changes" %>
+</p>
+ <% end %>  
+  </div>
+</div>
