@@ -43,5 +43,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
+  # Add Seed Dump Gem to be able to create and update the "seeds.rb" file for porting to Heroku
+  gem 'seed_dump'
 end
 
