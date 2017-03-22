@@ -73,10 +73,16 @@
             "@inited": "true",
             "json()": {
                 "Ruby on Rails": {
-                    "command": "",
+                    "command": "Project.group(:programmer_id)",
                     "default": true,
                     "name": "Ruby on Rails",
                     "runner": "Ruby on Rails (default)"
+                },
+                "puts": {
+                    "command": "puts \"hi\"",
+                    "name": "puts",
+                    "runner": "Ruby (default)",
+                    "toolbar": true
                 }
             }
         }

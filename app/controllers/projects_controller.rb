@@ -7,11 +7,11 @@ class ProjectsController < ApplicationController
   end
   def create
   @project = Project.new(project_params)
-  if @project.save
-  redirect_to '/projects'
-  else
-  render '/projects/new'
-  end
+    if @project.save
+    redirect_to '/projects'
+    else
+    render '/projects/new'
+    end
   end
   def show
   @project = Project.find(params[:id])
@@ -36,6 +36,9 @@ class ProjectsController < ApplicationController
   @project = Project.find(params[:id]).destroy
   flash[:success] = "Project Record deleted."
   redirect_to(:action => 'index')
+  end
+  def projprog
+
   end
 
 private
