@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   get 'projects/projprog' => 'projects#projprog'
+  get 'projects/projclient' => 'projects#projclient'
   resources :clients, :programmers, :projects
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
