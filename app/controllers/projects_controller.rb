@@ -1,7 +1,12 @@
 class ProjectsController < ApplicationController
-  def index
+def index
   @projects = Project.all
+  if params[:search]
+    @projects = Project.search(params[:search]).order(:id)
+  else
+    @projects = Project.all.order(:id)
   end
+end
   def new
   @project = Project.new
   end
@@ -43,6 +48,6 @@ class ProjectsController < ApplicationController
 
 private
   def project_params
-  params.require(:project).permit(:project, :project_id, :project_name, :client_id, :programmer_id)
+  params.require(:project).permit(:project, :project_id, :project_name, :client_id, :programmer_id, :search)
   end
 end

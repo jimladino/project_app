@@ -7,6 +7,17 @@
     <%= link_to "Main Menu", '/' %></h2></center>
  </div>
 </div>
+<div class="search">
+ <div class="container">
+  <center><h3><%= form_tag(projects_path, method: :get) do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Project Search" %>
+    <%= submit_tag 'Search', name: nil %>
+  <% end %>
+  <br>
+  <br>
+  </h3></center>
+ </div>
+</div>
 
 <div class="projectslist">
  <center><div class="container">
@@ -20,11 +31,13 @@
  		<td><h3>Action</h3></td>
  	</tr>
   <% @projects.each do |f| %>
+  <% clfind = Client.find(f.client_id) %>
+  <% progfind = Programmer.find(f.programmer_id) %>
   	<tr>
 		<td><%= f.id %></td>
 		<td><%= f.project_name %></td>
-		<td><%= f.client_id %></td>
-		<td><%= f.programmer_id %></td>
+		<td><%= clfind.name %></td>
+		<td><%= progfind.name %></td>
 		<td><%= link_to "Edit", edit_project_path(f) %>  <%= link_to "Delete", project_path(f), method: :delete, data: {confirm: "Are you sure?" } %></td>
 	</tr>
   
