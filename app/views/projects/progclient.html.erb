@@ -2,7 +2,7 @@
 <center></center>
  <div class="container">
    
-   <center><h1>Programmers Project List</h>
+   <center><h1>Programmers Client List</h>
    <h2><%= link_to "Add New Project", '/projects/new' %>    <%=link_to"Project Page", '/projects' %>    <%= link_to "Main Menu", '/' %></h2></center>
  </div>
 </div>
@@ -10,14 +10,14 @@
 <div class="projectslist">
  <div class="container">
  
-<% Project.all.order(programmer_id: :asc).group_by(&:programmer_id).each do |programmer, project| %>
+<% @progclient.each do |programmer, project| %>
 <% pmfind = Programmer.find(programmer) %>
   	  <h3>Programmer: <%= programmer %>, <%= pmfind.name %><br></h3>
-       <% project.each do |project| %>
-         <li><%= project.project_name %><br></li>
+       <% @progclient.each do |project| %>
+       <% clfind = Client.find(project.client_id) %>
+         <li><%= clfind.name %><br></li>
        <% end %>
 <% end %>
 		
  </div>
 </div>
-

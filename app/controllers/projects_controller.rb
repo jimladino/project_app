@@ -45,9 +45,12 @@ end
   def projprog
 
   end
+  def progclient
+    @progclient = Project.joins(:programmers, :clients)
+  end
 
 private
   def project_params
-  params.require(:project).permit(:project, :project_id, :project_name, :client_id, :programmer_id, :search)
+  params.require(:project).permit(:project, :project_id, :project_name, :client_id, :programmer_id, :search, :progclient)
   end
 end
