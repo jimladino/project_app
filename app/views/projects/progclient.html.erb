@@ -10,7 +10,7 @@
 <div class="projectslist">
  <div class="container">
  
-<% @progclient.each do |programmer, project| %>
+<% Project.all.order(programmer_id: :asc).group_by(&:programmer_id).each do |programmer, project| %>
 <% pmfind = Programmer.find(programmer) %>
   	  <h3>Programmer: <%= programmer %>, <%= pmfind.name %><br></h3>
        <% @progclient.each do |project| %>
