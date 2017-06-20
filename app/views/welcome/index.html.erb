@@ -1,17 +1,19 @@
 <div id="welcome">
-<h1><center>Projects Application</center></h1>
-<h2><center>Learning assignment to create Has Many to Many Associations<br>
-<br>
-<i>This is a mock information center application for a Web Development Company.  It records application projects the company is producing, 
-the client who ordered the project and the programmer working on each project ordered.</i></center></h2>
+    <h1><center>Projects Application</center></h1>
+    <h2><center>Learning assignment to create Has Many to Many Associations<br>
+    <br>
+    <i>This is a mock information center application for a Web Development Company.  It records application projects the company is producing, 
+    the client who ordered the project and the programmer working on each project ordered.</i></center></h2>
 
-<h3><li>Client List Master: <i>(Users can add, edit and delete the list of company clients.)</i> <%=link_to"Access Client List", 'clients#index' %></li></h3>
-<h3><li>Programmer List Master: <i>(Users can add, edit and delete the list of projects being develped by the company.)</i> <%=link_to"Programmer List", 'programmers#index' %></li></h3>
-<h3><li>Project Area <i>(This is where projects are linked to clients and the programmer working on them.)</i>
-<%=link_to"Project Page", 'projects#index' %></li></h3>
+    <h3><li>Client List Master: <i>(Users can add, edit and delete the list of company clients.)</i> <%=link_to"Access Client List", 'clients#index' %></li></h3>
+    <h3><li>Programmer List Master: <i>(Users can add, edit and delete the list of projects being develped by the company.)</i> <%=link_to"Programmer List", 'programmers#index' %></li></h3>
+    <h3><li>Project Area <i>(This is where projects are linked to clients and the programmer working on them.)</i>
+    <%=link_to"Project Page", 'projects#index' %></li></h3>
 <br><br>
-<h2><center>Company Queries</center></h2>
-<h3><li>List of Projects Grouped By Programmer: <%=link_to"Programmers Project List", '/projects/projprog' %></li></h3>
-<h3><li>List of Projects Grouped By Client: <%=link_to"Client Project List", '/projects/projclient' %></li></h3>
-<h3><li>List of each Programmer's Clients: <%=link_to"Programmers' Clients", '/projects/progclient' %></li></h3>
+    <h2><center>Company Queries</center></h2>
+    <div id="wqueries">
+        <h3><center><%=link_to"Programmers Project List", '/projects/projprog' %></center><br><i>Provides a List of projects grouped by the programmer assigned to them</i></h3>
+        <h3><center><%=link_to"Client Project List", '/projects/projclient' %></center><br><i>Provides a List of projects grouped by the client who ordered them</i></h3>
+        <h3><center><%=link_to"Programmers' Clients", '/projects/progclient' %></center><br><i>Provides a List of each programmer's clients</i></h3>
+    </div>
 </div>
