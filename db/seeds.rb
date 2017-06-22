@@ -6,12 +6,14 @@ Client.create!([
   {id: 6, name: "George Washington", created_at: "2017-03-21 03:24:40", updated_at: "2017-03-21 03:24:40"},
   {id: 7, name: "Bob Ladino", created_at: "2017-03-21 03:24:57", updated_at: "2017-03-21 03:24:57"},
   {id: 8, name: "Benjamin Franklin", created_at: "2017-03-22 04:45:12", updated_at: "2017-03-22 04:45:12"},
-  {id: 9, name: "Abraham Lincoln", created_at: "2017-03-22 04:46:25", updated_at: "2017-03-22 04:46:25"}
+  {id: 9, name: "Abraham Lincoln", created_at: "2017-03-22 04:46:25", updated_at: "2017-03-22 04:46:25"},
+  {id: 10, name: "Jane Doe", created_at: "2017-06-22 01:21:18", updated_at: "2017-06-22 01:21:18"}
 ])
 Programmer.create!([
   {id: 1, name: "Jeff Ladino", created_at: "2017-03-16 02:42:14", updated_at: "2017-03-16 02:42:14"},
   {id: 3, name: "Joseph Ladino", created_at: "2017-03-16 02:43:56", updated_at: "2017-03-16 02:43:56"},
-  {id: 4, name: "Jim Ladino", created_at: "2017-03-16 03:04:55", updated_at: "2017-03-16 03:04:55"}
+  {id: 4, name: "Jim Ladino", created_at: "2017-03-16 03:04:55", updated_at: "2017-03-16 03:04:55"},
+  {id: 5, name: "Brian Adams", created_at: "2017-06-22 01:22:27", updated_at: "2017-06-22 01:22:27"}
 ])
 Project.create!([
   {id: 1, programmer_id: 4, client_id: 1, created_at: "2017-03-18 01:32:55", updated_at: "2017-03-18 01:32:55", project_name: "Grocery App"},
@@ -25,5 +27,6 @@ Project.create!([
   {id: 10, programmer_id: 1, client_id: 5, created_at: "2017-03-21 03:30:03", updated_at: "2017-03-21 03:30:03", project_name: "Flag Designer App"},
   {id: 11, programmer_id: 4, client_id: 7, created_at: "2017-03-22 04:29:14", updated_at: "2017-03-22 04:29:14", project_name: "Client's App"},
   {id: 12, programmer_id: 4, client_id: 8, created_at: "2017-03-22 04:47:36", updated_at: "2017-03-22 04:47:36", project_name: "Homeschool Curriculum"},
-  {id: 8, programmer_id: 1, client_id: 7, created_at: "2017-03-21 03:28:42", updated_at: "2017-03-23 02:07:53", project_name: "Weather App"}
+  {id: 8, programmer_id: 1, client_id: 7, created_at: "2017-03-21 03:28:42", updated_at: "2017-03-23 02:07:53", project_name: "Weather App"},
+  {id: 13, programmer_id: 5, client_id: 10, created_at: "2017-06-22 01:23:03", updated_at: "2017-06-22 01:23:03", project_name: "Projects"}
 ])
