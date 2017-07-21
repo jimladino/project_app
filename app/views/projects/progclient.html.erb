@@ -12,7 +12,7 @@
  
 <% Project.all.order(programmer_id: :asc).group_by(&:programmer_id).each do |programmer, project| %>
 <% pmfind = Programmer.find(programmer) %>
-  	  <h3>Programmer: <%= programmer %>, <%= pmfind.name %><br></h3>
+  	  <h3>Programmer: <% programmer %> <%= pmfind.name %><br></h3>
        <% project.each do |project| %>
        <% clfind = Client.find(project.client_id) %>
          <li><%= clfind.name %><br></li>
